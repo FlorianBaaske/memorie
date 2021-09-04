@@ -10,7 +10,7 @@ function addCardsToHtml(number) {
 
         mySection = document.getElementById("memory-game")
         mySection.style.width = '1000px'
-        mySection.style.height = '100px'
+        mySection.style.height = '1000px'
 
         myDiv = document.createElement("div");
         myDiv.setAttribute("class", "memory-card");
