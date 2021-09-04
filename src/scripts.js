@@ -7,7 +7,7 @@ function addCardsToHtml(number) {
 
     myBase = Math.sqrt(number);
     mySimpleBase = Math.floor(myBase);
-    myWidth = mySimpleBase * 216;
+    myWidth = mySimpleBase * 218;
     if (myBase = mySimpleBase) {
         myHeight = mySimpleBase * 214;
     } else {
