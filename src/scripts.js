@@ -3,6 +3,10 @@ function load() {
     
 }
 
+function flipCard() {
+    this.classList.toggle('flip');
+}
+
 function addCardsToHtml(number) {
 
     myBase = Math.sqrt(number);
@@ -21,6 +25,7 @@ function addCardsToHtml(number) {
 
         myDiv = document.createElement("div");
         myDiv.setAttribute("class", "memory-card");
+        myDic.addEventListener('click', flipCard);
 
         myImg = document.createElement("img");
         myImg.setAttribute("class", "front-face");
