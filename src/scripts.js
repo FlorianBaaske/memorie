@@ -25,7 +25,7 @@ function addCardsToHtml(number) {
 
         myDiv = document.createElement("div");
         myDiv.setAttribute("class", "memory-card");
-        myDic.addEventListener('click', flipCard);
+        myDiv.addEventListener('click', flipCard);
 
         myImg = document.createElement("img");
         myImg.setAttribute("class", "front-face");
