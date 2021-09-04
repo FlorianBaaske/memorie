@@ -1,16 +1,23 @@
 function load() {
-    addCardsToHtml(9)
+    addCardsToHtml(10)
     
 }
 
 function addCardsToHtml(number) {
+
+    myBase = Math.sqrt(number);
+    mySimpleBase = Math.floor(myBase);
+    myWidth = mySimpleBase * 214;
+    if (myBase = mySimpleBase) {
+        myHeight = mySimpleBase * 214;
+    } else {
+        myHeight = (mySimpleBase + 1) * 214;
+    }
     mySection = document.getElementById("memory-game");
+    mySection.style.width = myWidth.toTring() + 'px';
+    mySection.style.height = myHeight.toTring() + 'px';
     
     for (let i = 0; i < number; i++) {
-
-        mySection = document.getElementById("memory-game")
-        mySection.style.width = '1000px'
-        mySection.style.height = '1000px'
 
         myDiv = document.createElement("div");
         myDiv.setAttribute("class", "memory-card");
