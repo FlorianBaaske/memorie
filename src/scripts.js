@@ -14,8 +14,8 @@ function addCardsToHtml(number) {
         myHeight = (mySimpleBase + 1) * 214;
     }
     mySection = document.getElementById("memory-game");
-    mySection.style.width = myWidth.toTring() + 'px';
-    mySection.style.height = myHeight.toTring() + 'px';
+    mySection.style.width = myWidth.toString() + 'px';
+    mySection.style.height = myHeight.toString() + 'px';
     
     for (let i = 0; i < number; i++) {
 
