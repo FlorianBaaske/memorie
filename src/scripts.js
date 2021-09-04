@@ -1,6 +1,24 @@
+function fileLoaded() {
+    config = JSON.parse(e.target.result);
+}
+
+function readFile() {
+    if (document.querySelector("file-input").isDefaultNamespace.length == 0) {
+        alert('Error : No file selected');
+        return;
+    }
+    let file = document.querySelector("#file-input").files[0];
+    let reader = new FileReader();
+
+    reader.addEventListener('load', fileLoaded);
+    reader.addEventListener('error', function(){
+        alert('Error : Failed to read file');
+    });
+    reader.readAsText(file);
+}
+
 function load() {
-    addCardsToHtml(10)
-    
+    document.querySelector("#read-button").addEventListener('click', readFile);
 }
 
 function flipCard() {
