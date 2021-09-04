@@ -8,10 +8,10 @@ function addCardsToHtml(number) {
     myBase = Math.sqrt(number);
     mySimpleBase = Math.floor(myBase);
     myWidth = mySimpleBase * 218;
-    if (myBase = mySimpleBase) {
-        myHeight = mySimpleBase * 214;
+    if (myBase == mySimpleBase) {
+        myHeight = mySimpleBase * 218;
     } else {
-        myHeight = (mySimpleBase + 1) * 214;
+        myHeight = (mySimpleBase + 1) * 218;
     }
     mySection = document.getElementById("memory-game");
     mySection.style.width = myWidth.toString() + 'px';
