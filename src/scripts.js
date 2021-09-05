@@ -1,5 +1,6 @@
 function fileLoaded() {
-    config = JSON.parse(e.target.result);
+    jsonConfig = JSON.parse(e.target.result);
+    alert(jsonConfig);
 }
 
 function readFile() {
