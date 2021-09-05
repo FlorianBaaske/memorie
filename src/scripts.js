@@ -1,4 +1,4 @@
-function fileLoaded() {
+function fileLoaded(e) {
     jsonConfig = JSON.parse(e.target.result);
     alert(jsonConfig);
 }
