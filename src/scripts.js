@@ -4,7 +4,7 @@ function fileLoaded() {
 }
 
 function readFile() {
-    if (document.querySelector("file-input").isDefaultNamespace.length == 0) {
+    if (document.querySelector("#file-input").isDefaultNamespace.length == 0) {
         alert('Error : No file selected');
         return;
     }
