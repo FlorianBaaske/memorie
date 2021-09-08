@@ -1,24 +1,24 @@
 {
     "pairs" : [
         {
-            "img-a" : "https://photo.flomain.de/Landscapes/i-MJNF54p/A",
-            "img-b" : "https://photo.flomain.de/Landscapes/i-MJNF54p/A"
+            "img_a" : "https://photos.smugmug.com/Landscapes/i-MJNF54p/0/7241af5c/M/Joshua%20Tree%20Park%20Overview-M.jpg",
+            "img_b" : "https://photos.smugmug.com/Landscapes/i-MJNF54p/0/7241af5c/M/Joshua%20Tree%20Park%20Overview-M.jpg"
         },
         {
-            "img-a" : "https://photo.flomain.de/Landscapes/i-7qGf2sd/A",
-            "img-b" : "https://photo.flomain.de/Landscapes/i-7qGf2sd/A"
+            "img_a" : "https://photo.flomain.de/Landscapes/i-7qGf2sd/A",
+            "img_b" : "https://photo.flomain.de/Landscapes/i-7qGf2sd/A"
         },
         {
-            "img-a" : "https://photo.flomain.de/Landscapes/i-cBCJzpR/A",
-            "img-b" : "https://photo.flomain.de/Landscapes/i-cBCJzpR/A"
+            "img_a" : "https://photo.flomain.de/Landscapes/i-cBCJzpR/A",
+            "img_b" : "https://photo.flomain.de/Landscapes/i-cBCJzpR/A"
         },
         {
-            "img-a" : "https://photo.flomain.de/Landscapes/i-qQjtftL/A",
-            "img-b" : "https://photo.flomain.de/Landscapes/i-qQjtftL/A"
+            "img_a" : "https://photo.flomain.de/Landscapes/i-qQjtftL/A",
+            "img_b" : "https://photo.flomain.de/Landscapes/i-qQjtftL/A"
         },
         {
-            "img-a" : "https://photo.flomain.de/Landscapes/i-mcL3PWs/A",
-            "img-b" : "https://photo.flomain.de/Landscapes/i-mcL3PWs/A"
+            "img_a" : "https://photo.flomain.de/Landscapes/i-mcL3PWs/A",
+            "img_b" : "https://photo.flomain.de/Landscapes/i-mcL3PWs/A"
         }
     ]
 }
