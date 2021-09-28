@@ -65,15 +65,8 @@ function addCardsToHtml() {
     for (let i = 0; i < number; i++) {
 
         myDiv = document.createElement("div");
-        myDiv.setAttribute("class", "memory-card");
+        myDiv.setAttribute("class", "memory-card flip");
         myDiv.addEventListener('click', flipCard);
-
-        myImg = document.createElement("img");
-        myImg.setAttribute("class", "front-face");
-        myImg.setAttribute("src", "images/front-face.jpeg");
-        myImg.setAttribute("alt", "React");
-
-        myDiv.appendChild(myImg);
 
         randomNumber = getRndInteger(0, myImageArray.length);
 
@@ -87,6 +80,13 @@ function addCardsToHtml() {
         myImg.setAttribute("src", imageUrl);
         myImg.setAttribute("id", imageId);
         myImg.setAttribute("alt", "Memory-Card");
+
+        myDiv.appendChild(myImg);
+
+        myImg = document.createElement("img");
+        myImg.setAttribute("class", "front-face");
+        myImg.setAttribute("src", "images/front-face.jpeg");
+        myImg.setAttribute("alt", "React");
 
         myDiv.appendChild(myImg);
 
