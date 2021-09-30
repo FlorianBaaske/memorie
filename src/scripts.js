@@ -1,4 +1,7 @@
 var myGame = new Object();
+myGame.hasFlippedCard = false;
+myGame.lockBoard = false;
+
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
@@ -35,19 +38,64 @@ function load() {
     document.querySelector("#read-button").addEventListener('click', readFile);
 }
 
+function resetBoard() {
+    [myGame.hasFlippedCard, myGame.lockBoard] = [false, false];
+    [myGame.firstCard, myGame.secondCard] = [null, null];
+}
+
 function flipCard() {
-    this.classList.toggle('flip');
+
+    if (myGame.lockBoard) return;
+    if (myGame.firstCard === this) return;
+
+    this.classList.remove('flip');
+
+    if (!myGame.hasFlippedCard) {
+        myGame.hasFlippedCard = true;
+        myGame.firstCard = this;
+        return;
+    }
+
+    myGame.secondCard = this;
+
+    checkForMatch();
+}
+
+function checkForMatch() {
+    if (myGame.firstCard.dataset.framework === myGame.secondCard.dataset.framework) {
+        disableCards();
+        return;
+    }
+
+    unflipCards();
+}
+
+function disableCards() {
+    myGame.firstCard.removeEventListener('click', flipCard);
+    myGame.secondCard.removeEventListener('click', flipCard);
+
+    resetBoard();
+}
+
+function unflipCards() {
+    myGame.lockBoard = true;
+    setTimeout(() => {
+        myGame.firstCard.classList.add('flip');
+        myGame.secondCard.classList.add('flip');
+
+        resetBoard();
+    }, 1500);
 }
 
 function addCardsToHtml() {
     number = myGame.numberOfPairs;
     myBase = Math.sqrt(number);
     mySimpleBase = Math.floor(myBase);
-    myWidth = mySimpleBase * 218;
+    myHeight = mySimpleBase * 222;
     if (myBase == mySimpleBase) {
-        myHeight = mySimpleBase * 222;
+        myWidth = mySimpleBase * 218;
     } else {
-        myHeight = (mySimpleBase + 1) * 222;
+        myWidth = (mySimpleBase + 1) * 218;
     }
     mySection = document.getElementById("memory-game");
     mySection.style.width = myWidth.toString() + 'px';
@@ -72,6 +120,8 @@ function addCardsToHtml() {
 
         imageId = myImageArray[randomNumber][0];
         imageUrl = myImageArray[randomNumber][1];
+
+        myDiv.setAttribute("data-framework", imageId);
 
         myImageArray.splice(randomNumber,1);
 
